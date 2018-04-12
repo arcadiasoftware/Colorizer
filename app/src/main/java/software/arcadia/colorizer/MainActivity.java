@@ -1,11 +1,17 @@
-package com.teamtreehouse.colorizer;
+package software.arcadia.colorizer;
 
+/* Made by Craig on 04/12/2018
+
+ */
+import android.os.Bundle;
 import android.graphics.Color;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.graphics.PorterDuff;
+
+
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -14,7 +20,7 @@ import com.bumptech.glide.Glide;
 
 public class MainActivity extends AppCompatActivity {
     ImageView imageView;
-    int[] imageResIds = {R.drawable.cuba1, R.drawable.cuba2, R.drawable.cuba3};
+    int[] imageResIds = {software.arcadia.colorizer.R.drawable.cuba1, software.arcadia.colorizer.R.drawable.cuba2, software.arcadia.colorizer.R.drawable.cuba3};
     int imageIndex = 0;
     boolean color = true;
     boolean red = true;
@@ -24,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        imageView = (ImageView)findViewById(R.id.imageView);
+        setContentView(software.arcadia.colorizer.R.layout.activity_main);
+        imageView = (ImageView)findViewById(software.arcadia.colorizer.R.id.imageView);
         loadImage();
     }
 
@@ -37,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuItem menuItem = menu.add("Next Image");
         menuItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS );
-        menuItem.setIcon(R.drawable.ic_add_a_photo_black_24dp);
+        menuItem.setIcon(software.arcadia.colorizer.R.drawable.ic_add_a_photo_black_24dp);
         menuItem.getIcon().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
         return true;
     }
